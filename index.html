@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Training</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="score-box">
+        <span class="score-text">Skorunuz: <span class="score">0</span> </span>
+      </div>
+      <div class="word-box">
+        <!-- <p class="word-text">Js ile dinamik eklenecek</p> -->
+      </div>
+      <div class="time-box">
+        <span class="time">00:60</span>
+      </div>
+      <div class="popup">
+        <div class="closeBtn" onclick="closePopup()">X</div>
+        <p>SÜRENİZ BİTTİ!</p>
+        <p>Skorunuz: <span class="result"></span></p>
+      </div>
+      <div class="keyboard-box">
+        <label class="form-info"
+          >Yukarıda gösterilen kelimeleri belirtilen süre içinde doğru şekilde
+          yazınız</label
+        >
+        <div class="start-box">
+          <input
+            class="word-input"
+            type="text"
+            placeholder="Kelimeyi giriniz..."
+            onkeyup="getWritingWord()"
+          />
+          <button class="startBtn" onclick="startTimer()">BAŞLAT</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
