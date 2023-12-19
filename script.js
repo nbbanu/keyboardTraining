@@ -33,6 +33,10 @@ function addRandomWordToUI(word) {
 }
 
 function startTimer() {
+  if(wordInput.disabled){
+    wordInput.disabled = false;
+    wordInput.focus();
+  }  
   let timer = setInterval(() => {
     timerBox.innerHTML = "00:" + sec;
     sec--;
@@ -66,6 +70,8 @@ function openPopup(){
 }
 function closePopup(){
     popup.classList.remove("open-popup");
-    scoreBox.innerHTML = 0; 
+    scoreBox.innerHTML = 0;
+    wordInput.value = "";
+    sec = 60;
 }
 
